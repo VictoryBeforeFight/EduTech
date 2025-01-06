@@ -46,11 +46,10 @@ h1 ~ h6 태그로 나타내는 제목들은 문서의 논리적 흐름에 따라
         - 농구
         - 야구
         
-1. `p`
+2. `p`
 
 > 문단(paragraph)을 구분합니다.
 
-![Alt text](/Images/ptag.png)
 
 ```html
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -61,7 +60,7 @@ h1 ~ h6 태그로 나타내는 제목들은 문서의 논리적 흐름에 따라
 </p>
 ```
 
-1. `div` 
+3. `div` 
 
 > HTML 문서에서 div는 아래의 그림과 같이 하나의 영역을 구분합니다.
 
@@ -94,11 +93,11 @@ h1 ~ h6 태그로 나타내는 제목들은 문서의 논리적 흐름에 따라
 div 태그 자체는 영역을 구분하는 것뿐, CSS 스타일링 전에는 레이아웃에 영향을 주지 않습니다. div 태그는 부모 요소의 전체 공간을 차지하는 Block Element이며, 기본적으로 해당 행을 꽉 채우게 됩니다.
 
 <aside>
-💡 <div> 만으로는 컨테이너의 성격을 알 수 없으므로, 의미를 명확하게 나타내기 위해 <header>, <nav>, <section>, <article>, <aside>, <footer> 와 같은 Semantic Tag들을 활용하기도 합니다. Semantic Tags는 레슨 4에서 후술합니다.
+💡 div 만으로는 컨테이너의 성격을 알 수 없으므로, 의미를 명확하게 나타내기 위해 header, nav, section, article, aside, footer 와 같은 Semantic Tag들을 활용하기도 합니다. Semantic Tags는 레슨 4에서 후술합니다.
 
 </aside>
 
-1. `hr` 
+4. `hr` 
 
 > 콘텐츠 사이에 수평선을 표시합니다.
 
@@ -118,7 +117,7 @@ div 태그 자체는 영역을 구분하는 것뿐, CSS 스타일링 전에는 �
 
 ### 텍스트 관련
 
-1. `span` 
+5. `span` 
 
 > 텍스트 콘텐츠를 나타냅니다.
 > 
@@ -137,7 +136,7 @@ div 태그 자체는 영역을 구분하는 것뿐, CSS 스타일링 전에는 �
 
 ![Alt text](Images/spantag.png)
 
-1. `a` (Anchor)
+6. `a` (Anchor)
 
 > 다른 페이지로 이동할 수 있는 하이퍼링크를 생성합니다.
 > 
@@ -158,7 +157,7 @@ div 태그 자체는 영역을 구분하는 것뿐, CSS 스타일링 전에는 �
 | target | 열릴 위치를 지정  | _blank,  _self, _top, _parent |
 | title | 링크에 마우스 오버시 도움말 설정 |  |
 
-1. `b` & `strong`
+7. `b` & `strong`
 
 > 텍스트를 강조합니다.
 
@@ -169,7 +168,7 @@ div 태그 자체는 영역을 구분하는 것뿐, CSS 스타일링 전에는 �
 ```
 
 
-1. `i` & `em`
+8. `i` & `em`
 
 > 기울임체로 만듭니다.
 > 
@@ -181,7 +180,7 @@ div 태그 자체는 영역을 구분하는 것뿐, CSS 스타일링 전에는 �
 ```
 
 
-1. `br`
+9. `br`
 
 > 줄바꿈 효과를 줍니다.
 > 
@@ -210,7 +209,7 @@ div 태그 자체는 영역을 구분하는 것뿐, CSS 스타일링 전에는 �
 ```
 
 
-1. `ul` 
+2. `ul` 
 
 > 순서가 없는 리스트(Unordered List) 입니다.
 > 
@@ -224,7 +223,7 @@ div 태그 자체는 영역을 구분하는 것뿐, CSS 스타일링 전에는 �
 </ul>
 ```
 
-1. `ol`
+3. `ol`
 
 > 순서가 있는 리스트(Ordered List) 입니다.
 > 
@@ -262,7 +261,7 @@ div 태그 자체는 영역을 구분하는 것뿐, CSS 스타일링 전에는 �
 
 </aside>
 
-1. `iframe`
+2. `iframe`
 
 > 비디오를 삽입합니다.
 > 
