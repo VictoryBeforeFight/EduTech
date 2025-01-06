@@ -27,7 +27,7 @@
 </body>
 ```
 
-![1-3-1-h1-6.html](https://prod-files-secure.s3.us-west-2.amazonaws.com/ae55bd08-06d6-4b1a-bfab-b201d8c885ce/fc56c44d-816d-4090-99de-03d8aa68d759/Untitled.png)
+![1-3-1-h1-6.html](Images/htag.png)
 
 1-3-1-h1-6.html
 
@@ -54,7 +54,7 @@
 > 문단(paragraph)을 구분합니다.
 > 
 
-![1-3-2-p.html](https://prod-files-secure.s3.us-west-2.amazonaws.com/ae55bd08-06d6-4b1a-bfab-b201d8c885ce/4b71f363-818d-4762-93aa-00fc6b7bbb27/Untitled.png)
+![Alt text](/Images/ptag.png)
 
 1-3-2-p.html
 
