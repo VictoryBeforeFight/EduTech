@@ -35,11 +35,6 @@ CSS 파일 불러오기는 다음과 같은 방식으로 진행합니다.
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 ```
 
-<aside>
-💡 속성과 속성값에 대해서는 추후 다뤄지게 됩니다.
-
-</aside>
-
 1. `meta` 
 
 > <link>, <script>, <style>, <title> 등으로 나타낼 수 없는 메타데이터를 담습니다.
