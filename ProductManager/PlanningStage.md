@@ -7,7 +7,7 @@
 ---
 
 # MVP : Minimum Viable Product
-
+ 
  **: 제품의 가장 중요한 기능에 집중하여 개발하는 초기 모델**
 
 ---
