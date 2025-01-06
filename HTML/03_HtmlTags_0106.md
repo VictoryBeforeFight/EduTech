@@ -45,6 +45,8 @@ h1 ~ h6 태그로 나타내는 제목들은 문서의 논리적 흐름에 따라
         - 축구
         - 농구
         - 야구
+<br>
+<br>
         
 2. `p`
 
@@ -59,6 +61,7 @@ h1 ~ h6 태그로 나타내는 제목들은 문서의 논리적 흐름에 따라
   Veniam facere facilis numquam molestiae praesentium ad, in obcaecati earum pariatur, 
 </p>
 ```
+<br>
 
 3. `div` 
 
@@ -96,6 +99,7 @@ div 태그 자체는 영역을 구분하는 것뿐, CSS 스타일링 전에는 �
 💡 div 만으로는 컨테이너의 성격을 알 수 없으므로, 의미를 명확하게 나타내기 위해 header, nav, section, article, aside, footer 와 같은 Semantic Tag들을 활용하기도 합니다. Semantic Tags는 레슨 4에서 후술합니다.
 
 </aside>
+<br>
 
 4. `hr` 
 
@@ -114,10 +118,11 @@ div 태그 자체는 영역을 구분하는 것뿐, CSS 스타일링 전에는 �
 
 
 <hr>태그는 닫는 태그가 필요 없는(self-closing) 태그입니다.
+<br><br>
 
 ### 텍스트 관련
 
-5. `span` 
+1. `span` 
 
 > 텍스트 콘텐츠를 나타냅니다.
 > 
@@ -135,8 +140,8 @@ div 태그 자체는 영역을 구분하는 것뿐, CSS 스타일링 전에는 �
 ```
 
 ![Alt text](Images/spantag.png)
-
-6. `a` (Anchor)
+<br>
+2. `a` (Anchor)
 
 > 다른 페이지로 이동할 수 있는 하이퍼링크를 생성합니다.
 > 
@@ -156,8 +161,9 @@ div 태그 자체는 영역을 구분하는 것뿐, CSS 스타일링 전에는 �
 | href (Hyperlink Reference) | 웹 사이트 주소를 명시 |  |
 | target | 열릴 위치를 지정  | _blank,  _self, _top, _parent |
 | title | 링크에 마우스 오버시 도움말 설정 |  |
+<br>
 
-7. `b` & `strong`
+3. `b` & `strong`
 
 > 텍스트를 강조합니다.
 
@@ -167,8 +173,8 @@ div 태그 자체는 영역을 구분하는 것뿐, CSS 스타일링 전에는 �
 <span><strong>CSS</strong></span>
 ```
 
-
-8. `i` & `em`
+<br>
+4. `i` & `em`
 
 > 기울임체로 만듭니다.
 > 
@@ -179,8 +185,9 @@ div 태그 자체는 영역을 구분하는 것뿐, CSS 스타일링 전에는 �
 <span><em>CSS</em></span>
 ```
 
+<br>
 
-9. `br`
+4. `br`
 
 > 줄바꿈 효과를 줍니다.
 > 
@@ -194,7 +201,7 @@ div 태그 자체는 영역을 구분하는 것뿐, CSS 스타일링 전에는 �
 
 
 <br> 태그는 self-closing 태그입니다.
-
+<br><br>
 ### 목록 생성
 
 1. `li` 
