@@ -1,0 +1,67 @@
+<!-- 
+    ## 실습 가이드
+
+    ### 요구 사항
+
+    1. 예시 화면을 참고하여 숙소 예약 사이트를 제작합니다.
+    2. <h1>, <h2>, <h3> 태그를 활용하여 제목을 작성합니다.
+    3. 다양한 input type을 활용합니다.
+    4. label 태그를 활용하여, input에 자동적으로 포커싱 되게 제작합니다.
+    5. 이름과 이메일 정보는 필수적이며, placeholder를 활용합니다.
+    6. 인원수의 최솟값은 0이고, 최댓값은 5명입니다.
+    7. <hr>, <br> 태그를 활용해 라인을 바꾸거나 간단한 레이아웃을 진행합니다.
+    8. block & inline 요소들을 활용해 화면을 간단하게 레이아웃할 수 있습니다.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reservation</title>
+</head>
+
+<body>
+  <h1>숙소 예약</h1>
+  <form action="#">
+    <h2>신상 정보</h2>
+
+    <div>
+      <label for="name">이름 : </label>
+      <input type="text" id="name" placeholder="이름 입력" required>
+    </div>
+
+    <div>
+      <label for="email">이메일 : </label>
+      <input type="email" id="email" placeholder="이메일 입력" required>
+    </div>
+
+    <div>
+      <label for="profile">예약자 사진 :</label>
+      <input type="file">
+    </div>
+
+    <hr>
+
+    <h2>상세 정보</h2>
+      <h3>선호 객실 타입</h3>
+        <label for="city">도시뷰 : </label>
+        <input type="checkbox" name="city" id="city" value="city">
+        <label for="lake">레이크뷰 : </label>
+        <input type="checkbox" name="lake" id="lake" value="lake">
+        <label for="mountain">마운틴뷰 : </label>
+        <input type="checkbox" name="mountain" id="mountain" value="mountain">
+      <h3>동행자 정보</h3>
+        <label for="people">인원수 :</label>
+        <input type="number" name="people" id="people" max="5" min="0">
+    <h2>기타</h2>
+      <label for="more">요청 사항 :</label>
+      <textarea name="more" id="more" cols="30" rows="10"></textarea>
+    <hr>
+     <button>전송</button>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+* {
+    font-size: 20px;
+  }
+
+  #happy {
+    color: red;
+  }
+
+  .html {
+    color: orange;
+  }
+
+  p {
+    color: blue;
+  }
+
+  a[href="https://www.naver.com"] {
+    color: green;
+  }
