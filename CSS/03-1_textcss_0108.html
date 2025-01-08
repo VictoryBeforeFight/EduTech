@@ -1,0 +1,54 @@
+<!-- 
+    ## 실습 가이드
+
+### 요구 사항
+
+1. 원하는 구글 폰트 혹은 웹 폰트를 적용합니다.
+2. 스켈레톤 코드를 활용합니다.
+3. <body> 태그에 1번의 웹 폰트가 전체적으로 적용되도록 지정합니다.
+4. <body> 태그는 100 Viewport의 높이를 가집니다.
+5. <p> 태그 안의 Lorem은 다음 속성을 적용합니다.
+    1. 16px의 font-size
+    2. 강조 처리
+    3. 50px의 line-height
+    4. 5px의 자간
+    5. #333의 텍스트 색상
+6. <span> 태그의 배경색은 aqamarine이며, 부모 요소의 1.5배 크기의 font-size가 되도록 설정합니다.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <title>csstext 실습</title>
+  <style>
+    body { 
+      font-family: 'Noto Sans KR', sans-serif; 
+      height: 100vh;
+    }
+    
+    p {
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 50px;
+      letter-spacing: 5px;
+      color: #333;
+    }
+    
+    span {
+      background-color: aquamarine;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Text CSS</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nobis animi aperiam libero laboriosam iste natus magnam, delectus amet ipsam adipisci ut similique. Provident velit tempore fuga in voluptatibus deleniti!</p>
+  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eaque laboriosam, praesentium nisi asperiores aperiam sequi exercitationem? In natus non ex dignissimos corporis ipsam autem quos. Blanditiis nostrum quia reprehenderit.</span>
+</body>
+</html>
