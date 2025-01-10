@@ -1,0 +1,50 @@
+<!-- 
+    ## 실습 가이드
+
+### 요구 사항
+
+1. 예시 사진을 참고하여 예시 사진처럼 되도록 css 코드를 완성합니다.
+2. 결합자 +와 ~ 를 모두 활용합니다.
+3. 활용 색상은 빨간색과 초록색입니다.
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      color: black;
+    }
+/* 2 : red ⇒ 인접 형제 결합자 (p 의 형제 요소 중 p 바로 뒤에 위치하는 p 요소를 선택) */
+    p + p {
+      color: red;
+    }
+/* 6 ~ 8: black ⇒ 전체 선택자(*), 인접 형제 결합자가 적용되지 않음, article이 .box 바로 뒤에 위치하여 무효 */
+    p ~ span {
+      color: green;
+    }
+
+  </style>
+</head>
+<body>
+  <span>0</span> 
+  <p>1</p>
+  <p>2</p>
+  <span>3</span>
+  <p>4</p>
+  <div class="box">
+    <p>5</p>
+  </div>
+  <article>기사</article>
+  <ul>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+  </ul>
+  <span>9</span>
+</body>
+</html>

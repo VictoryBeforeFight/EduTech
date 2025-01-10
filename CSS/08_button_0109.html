@@ -1,0 +1,42 @@
+<!-- 
+    ## 실습 가이드
+
+### 요구 사항
+
+1. 예시 화면을 참고하여 마우스 오버 시 색상이 변하는 버튼을 제작합니다.
+2. 버튼의 너비는 150px이며, 높이는 50px로 지정합니다.
+3. 기본 배경색은 `#fff`를 활용하고, 마우스를 올렸을 때 나타나는 색상은 `#1b5cec`을 활용합니다.
+4. 버튼을 둥글게 깎고 테두리를 없앤 후, 적당한 box-shadow를 활용합니다.
+5. 폰트는 자유롭게 조정합니다.
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button {
+      width: 150px;
+      height: 50px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      background-color: #fff;
+      border: none;
+      border-radius: 45px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+      background-color: #1bec33;
+      box-shadow: 0px 15px 20px rgba(27, 236, 48, 0.4);
+}
+    </style>
+</head>
+<body>
+    <button class="button">제출하기</button>
+</body>
+</html>

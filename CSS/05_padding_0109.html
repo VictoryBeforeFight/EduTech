@@ -1,0 +1,54 @@
+<!-- 
+    ## 실습 가이드
+
+### 요구 사항
+
+1. 주어진 스켈레톤 코드를 활용하여 예시 화면처럼 되도록 코드를 작성합니다.
+2. 패딩만을 활용하여 레이아웃 합니다.
+3. <h1>, <div>는 10px의  패딩을 갖습니다.
+4. <input> 들도 10px의 패딩을 갖습니다.
+5. placeholder를 활용합니다.
+6. 버튼 색상은 자유롭게 설정하며, 마우스 오버 시 커서가 바뀌도록 설정합니다.
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1, div {
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    input[type='submit'] {
+      background-color: aquamarine;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Log In</h1>
+  <form>
+    <div>
+      <input type="text" placeholder="Username">
+    </div>
+    <div>
+      <input type="password" placeholder="Password"><br>
+    </div>
+    <div>
+      <input type="submit" value="로그인"></input>
+    </div>
+  </form>
+</body>
+</html>

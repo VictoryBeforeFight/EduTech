@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    .Username, .Password {
+	    border:0;
+	    background: none;
+	    display: block;
+	    margin: 20px auto;
+	    text-align: center;
+	    border: 2px solid #3498db;
+	    padding: 14px 10px;
+	    width: 200px;
+	    outline: none;
+	    border-radius: 24px;
+	    transition: 0.25s;
+  }
+
+  .Username:focus, .Password:focus {
+	    width: 320px;
+	    border: 2px solid #2ecc71;
+  }
+  </style>
+</head>
+<body>
+  <h1>Log In</h1>
+  <input class="Username" type="text" placeholder="Username">
+  <input class="Password" type="password" placeholder="Password">
+</body>
+</html>
