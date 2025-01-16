@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        width: 50%;
+        margin: 5rem auto;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .todo-input {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .todo-input > input {
+        flex-grow: 1;
+      }
+
+      .todo-input > button {
+        background-color: silver;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .todo-list {
+        list-style-type: none;
+        padding: 0px;
+      }
+
+      .todo-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1.5px black solid;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container" class="container">
+      <h1>ToDo List</h1>
+    </div>
+    <script>
+      // 컨테이너 요소 선택
+      const container = document.querySelector('#container');
+
+      // 할 일 입력 폼 컨테이너 생성
+      const todoInputDiv = document.createElement('div');
+      todoInputDiv.classList.add('todo-input');
+
+      // 입력 필드 생성, 폼 컨테이너에 추가
+      const inputField = document.createElement('input');
+      inputField.type = 'text';
+      todoInputDiv.appendChild(inputField);
+
+      // 버튼 생성, 폼 컨테이너에 추가
+      const addButton = document.createElement('button');
+      addButton.textContent = '추가';
+      todoInputDiv.appendChild(addButton);
+
+      // 폼 컨테이너를 컨테이너에 추가
+      container.appendChild(todoInputDiv);
+
+      // 할 일 목록(ul) 생성
+      const todoList = document.createElement('ul');
+      todoList.classList.add('todo-list');
+
+      // 생성할 할 일 데이터
+      const todos = [
+        { text: '똥싸기', completed: true },
+        { text: '밥먹기', completed: false },
+        { text: '자기', completed: false },
+      ];
+
+      // 반복문을 활용한 개별 할 일 생성, 할 일 목록에 추가
+      todos.forEach((todo) => {
+        // 텍스트와 체크 박스 요소를 담을 리스트 요소 생성
+        const todoItem = document.createElement('li');
+        todoItem.classList.add('todo-item');
+
+        // 할 일 텍스트(span) 생성, 할 일 리스트에 추가
+        const todoText = document.createElement('span');
+        todoText.textContent = todo.text;
+        todoItem.appendChild(todoText);
+
+        // 체크박스(input) 생성, 할 일 리스트에 추가
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.checked = todo.completed;
+        todoItem.appendChild(checkbox);
+
+        // 할 일 목록에 리스트 요소 추가
+        todoList.appendChild(todoItem);
+      });
+
+      // 할 일 목록을 컨테이너에 추가
+      container.appendChild(todoList);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="container">
+      <p id="first">첫 번째 문단</ㄴp>
+      <p class="second">두 번째 문단</p>
+      <p class="greeting">안녕하세요</p>
+      <p class="greeting1">HELLO</p>
+    </div>
+    <script>
+      //querySelector : id는 #으로 / class는 .으로 호출
+      const firstParagraph = document.querySelector('#first');
+      console.log(firstParagraph.textContent); // 첫 번째 문단
+
+      const secondParagraph = document.querySelector('.second');
+      console.log(secondParagraph.textContent); // 두 번째 문단
+
+      //querySelectorAll : 태그 이름으로 한번에 [리스트 형식]으로 불러와서 forEach로 지정
+      const paragraphs = document.querySelectorAll('p');
+      paragraphs.forEach((p, index) => {
+        console.log(`문단 ${index + 1}: ${p.textContent}`);
+      });
+      // 문단 1: 첫 번째 문단
+      // 문단 2: 두 번째 문단
+    </script>
+  </body>
+</html>
