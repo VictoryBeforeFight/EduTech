@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        color: aliceblue;
+        font-family: sans-serif;
+        font-size: 18px;
+        line-height: 1.5;
+        position: relative; /* 부모 요소에 relative 추가 */
+      }
+
+      /* 외부 링크 이미지 스타일 */
+      .background-image {
+        position: absolute; /* 이미지 위치를 절대적으로 설정 */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 이미지 비율 유지하며 채우기 */
+        z-index: -1; /* 이미지가 뒤로 가도록 z-index 설정 */
+      }
+
+      /* 나머지 스타일은 기존과 동일 */
+      .switcher {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .switcher li {
+        float: left;
+        width: 30px;
+        height: 30px;
+        margin: 0 15px 15px 0;
+        border-radius: 18px;
+        border: 3px solid black;
+      }
+
+      .switcher li:hover {
+        cursor: pointer;
+      }
+
+      #grayButton {
+        background: gray;
+      }
+      #whiteButton {
+        background: white;
+      }
+      #navyButton {
+        background: navy;
+      }
+
+      .parent {
+        height: 100%;
+      }
+      #time {
+        font-size: 5rem;
+        padding: 0 2rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+      }
+      .row {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="https://i.namu.wiki/i/Bn3YCvObx1mDnWmNAr4LsJFPTTs2RkbmwXDv67vCdhy4_f-H3a63MwzcZsTwClYfIcR78bpJVt9pSJ79HJ1F-uZBUudauyShmt87rKC1A_p8ANcLptGH4YBVBUsdZfPdlW0InW7UCg5HrfiOs7dHeQ.webp" alt="External Image" class="background-image" />
+    
+    <h2>수동 카운터</h2>
+    <p class="p1">0</p>
+    <button class="btn">하나씩 카운트!</button>
+    <button class="minus">빼기</button>
+    <button class="reset">초기화</button>
+    <hr>
+    <h1>Dog Image</h1>
+    <button id="dog">Get Dog Image</button>
+    <div>
+      <img id="dogImage" style="display: none" alt="random-dog-image" />
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <hr>
+    <ul class="switcher">
+      <li id="grayButton"></li>
+      <li id="whiteButton"></li>
+      <li id="navyButton"></li>
+    </ul>
+
+    <h1>Theme Switcher</h1>
+
+    <div class="parent row justify-content-center align-items-center">
+      <div id="time" class="font-weight-bold text-light"></div>
+    </div>
+    
+    <script>
+      // 1 수동
+      const p1 = document.querySelector(".p1");
+      const btn = document.querySelector(".btn");
+      const minus = document.querySelector(".minus");
+      const reset = document.querySelector(".reset");
+
+      btn.addEventListener("click", function (event) {
+        let cnt = parseInt(p1.innerText);
+        cnt++;
+        p1.innerText = cnt;
+      });
+
+      reset.addEventListener("click", function (event) {
+        let cnt = parseInt(p1.innerText);
+        cnt = 0;
+        p1.innerText = cnt;
+      });
+    
+      minus.addEventListener("click", function (event) {
+        let cnt = parseInt(p1.innerText);
+        cnt--;
+        p1.innerText = cnt;
+      });
+
+      const dogImage = document.querySelector("#dogImage");
+      const getDogBtn = document.querySelector("#dog");
+
+      getDogBtn.addEventListener("click", function (event) {
+        axios
+          .get("https://dog.ceo/api/breeds/image/random")
+          .then(function (res) {
+            const dogUrl = res.data.message;
+            dogImage.src = dogUrl;
+            dogImage.style.display = "block";
+          })
+          .catch(function (err) {
+            console.error(err);
+          });
+      });
+
+      const body = document.querySelector("body")
+      const grayButton = document.querySelector("#grayButton");
+      const whiteButton = document.querySelector("#whiteButton");
+      const navyButton = document.querySelector("#navyButton");
+
+      grayButton.addEventListener('click', function () {
+        body.style.backgroundColor = 'gray'
+        body.style.color = 'white'
+      })
+      whiteButton.addEventListener('click', function () {
+        body.style.backgroundColor = 'white'
+        body.style.color = 'white'
+      })
+      navyButton.addEventListener('click', function () {
+        body.style.backgroundColor = 'navy'
+        body.style.color = 'white'
+      })
+
+      const timeDiv = document.querySelector('#time')
+
+      const dpTime = function () {
+        const now = new Date()
+        let hours = now.getHours()
+        let minutes = now.getMinutes()
+        let seconds = now.getSeconds()
+        
+        let ampm =  '오전 '
+        if (hours > 12) {
+          hours -= 12
+          ampm = '오후 '
+        }
+        if (hours < 10) {
+          hours = '0' + hours
+        }
+        if (minutes < 10) {
+          minutes = '0' + minutes
+        }
+        if (seconds < 10) {
+          seconds = '0' + seconds
+        }
+        timeDiv.innerText = ampm + hours + ":" + minutes + ":" + seconds
+      }
+    
+      setInterval(dpTime, 1000)
+    </script>
+  </body>
+</html>
